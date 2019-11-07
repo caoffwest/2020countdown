@@ -1,8 +1,9 @@
+
 <html>
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <title>COUNT DOWN CAOFF 2018-2019 投票</title>
 </head>
 <body>
@@ -80,8 +81,8 @@ var upTitle = function(index) {
     selectTitles.splice(index-1,2,selectTitles[index],selectTitles[index-1]);
     loadSelection();
 }
-gdata = { io: { handleScriptLoaded: function(json) { 
-    
+$.get("https://spreadsheets.google.com/feeds/list/13Ss_ox1Z7h0OUL_dBcmk0Z5yhrC52LZp4KDlP7JZ1xg/oty81yf/public/values?alt=json-in-script",
+ function(json) { 
     var entrys = json.feed.entry;
     var len = entrys.length;
     
@@ -108,10 +109,9 @@ gdata = { io: { handleScriptLoaded: function(json) {
           loadSelection();
       }
     });
-    
-} } };
+  } 
+);
 //-->
 </script>
-<script src="https://spreadsheets.google.com/feeds/list/13Ss_ox1Z7h0OUL_dBcmk0Z5yhrC52LZp4KDlP7JZ1xg/oty81yf/public/values?alt=json-in-script"/>
 </body>
 </html>
