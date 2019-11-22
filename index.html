@@ -81,7 +81,7 @@ var upTitle = function(index) {
     selectTitles.splice(index-1,2,selectTitles[index],selectTitles[index-1]);
     loadSelection();
 }
-$.get("https://spreadsheets.google.com/feeds/list/13Ss_ox1Z7h0OUL_dBcmk0Z5yhrC52LZp4KDlP7JZ1xg/oty81yf/public/values?alt=json",
+$.get("https://github.com/caoffwest/2020countdown/blob/e86604df9c63cb6c3be4d60107dfe2e0097a2cf2/data.json",
  function(json) { 
     var entrys = json.feed.entry;
     var len = entrys.length;
